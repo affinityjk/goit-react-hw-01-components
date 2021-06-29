@@ -8,7 +8,7 @@ const FriendListItem = ({ avatar = defaultImg, name, isOnline }) => {
       <img class="avatar" src={avatar} alt={name} width="48" />
       <p class="name">{name}</p>
     </li>
-  )
+  );
 }
 
 FriendListItem.propTypes = {
