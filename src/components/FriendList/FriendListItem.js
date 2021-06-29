@@ -12,6 +12,10 @@ const FriendListItem = ({ avatar = defaultImg, name, isOnline }) => {
   );
 };
 
+FriendListItem.defaultProps = {
+  avatar: defaultImg,
+};
+
 FriendListItem.propTypes = {
   avatar: PropTypes.string,
   name: PropTypes.string.isRequired,
