@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
 import { getRandomColor } from "../../utils/randomColor";
 import s from "./Statistics.module.css";
+import Section from "../Section/Section";
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      {title && <h2>{title}</h2>}
-
+    <Section title={title}>
       <ul className={s.statList}>
         {stats.map(({ id, label, percentage }) => (
           <li
@@ -19,7 +18,7 @@ const Statistics = ({ title, stats }) => {
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 };
 

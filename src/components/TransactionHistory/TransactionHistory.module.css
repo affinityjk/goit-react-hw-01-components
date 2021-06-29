@@ -1,0 +1,38 @@
+.transactionHistory {
+  width: 100%;
+  border: 1px solid silver;
+  border-collapse: collapse;
+
+  text-transform: capitalize;
+}
+
+thead {
+  height: 40px;
+  background-color: whitesmoke;
+  font-weight: 500;
+  font-size: 18px;
+  color: steelblue;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+th,
+td {
+  padding: 10px;
+}
+
+tbody {
+  text-align: center;
+  border: 2px solid silver;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  color: steelblue;
+}
+
+tbody td:not(:last-child) {
+  border-right: 2px solid silver;
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}

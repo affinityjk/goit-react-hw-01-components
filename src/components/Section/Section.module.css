@@ -1,0 +1,29 @@
+.section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.section:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.section:nth-child(3) {
+  padding-bottom: 20px;
+}
+
+.title {
+  color: #212121;
+  background-color: #b3d1df;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+
+  padding: 10px 0;
+}
