@@ -1,3 +1,4 @@
+import Container from "./components/Container/Container";
 import Profile from "./components/SocialProfile/Profile";
 import Statistics from "./components/Statistics/Statistics";
 import FriendList from "./components/FriendList/FriendList";
@@ -9,15 +10,13 @@ import transactions from "./data/transactions.json";
 
 const App = () => {
   return (
-    <div>
+    <Container>
       <Profile
         name={user.name}
         tag={user.tag}
         location={user.location}
         avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
 
       <Statistics title="Upload stats" stats={statisticsData} />
@@ -25,7 +24,7 @@ const App = () => {
       <FriendList friends={friends} />
 
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 };
 

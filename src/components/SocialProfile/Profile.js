@@ -2,13 +2,14 @@ import PropTypes from "prop-types";
 import defaultImg from "../../images/defaultImg.jpg";
 import s from "./Profile.module.css";
 
-const Profile = ({ name, tag, location, avatar, followers, views, likes }) => {
+const Profile = ({ name, tag, location, avatar, stats }) => {
+  const { followers, views, likes } = stats;
   return (
     <div className={s.profile}>
       <div className={s.description}>
         <img src={avatar} alt="Аватар пользователя" className={s.avatar} />
         <p className={s.name}>{name}</p>
-        <p className={s.tag}>{tag}</p>
+        <p className={s.tag}>@{tag}</p>
         <p className={s.location}>{location}</p>
       </div>
 
@@ -39,9 +40,11 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Profile;

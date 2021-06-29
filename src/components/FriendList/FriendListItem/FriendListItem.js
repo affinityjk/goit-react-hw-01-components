@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import defaultImg from "../../images/defaultImg.jpg";
+import defaultImg from "../../../images/defaultImg.jpg";
 import s from "./FriendListItem.module.css";
 
 const FriendListItem = ({ avatar = defaultImg, name, isOnline }) => {
@@ -10,10 +10,6 @@ const FriendListItem = ({ avatar = defaultImg, name, isOnline }) => {
       <p className={s.name}>{name}</p>
     </li>
   );
-};
-
-FriendListItem.defaultProps = {
-  avatar: defaultImg,
 };
 
 FriendListItem.propTypes = {
